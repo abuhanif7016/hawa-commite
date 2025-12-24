@@ -1,13 +1,561 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>হাওয়া কমিটি</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>হাওয়া কমিটি</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gradient-to-b from-blue-50 to-white text-gray-800 font-sans">
+
+  <!-- Navbar Sticky -->
+  <nav class="bg-blue-700 text-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo + Notices -->
+        <div class="flex items-center space-x-4">
+          <a href="#home" class="text-2xl font-bold">হাওয়া কমিটি</a>
+          <span class="text-sm bg-yellow-400 text-black px-2 py-1 rounded">নোটিশ</span>
+          <span class="text-sm bg-green-400 text-white px-2 py-1 rounded">অবস্থান</span>
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="hidden md:flex space-x-6 items-center font-medium">
+          <a href="#home" class="hover:text-cyan-300">হোম</a>
+          <a href="#founders" class="hover:text-cyan-300">প্রতিষ্ঠাতা</a>
+          <a href="#contact" class="hover:text-cyan-300">যোগাযোগ</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <a href="#home" class="block px-4 py-2 hover:bg-blue-600">হোম</a>
+      <a href="#founders" class="block px-4 py-2 hover:bg-blue-600">প্রতিষ্ঠাতা</a>
+      <a href="#contact" class="block px-4 py-2 hover:bg-blue-600">যোগাযোগ</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="bg-gradient-to-r from-blue-700 to-cyan-400 text-white py-12 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-2">হাওয়া কমিটি</h1>
+    <p class="text-xl md:text-2xl mb-1">“হাওয়ায় উড়ে যাবে বৈষম্য”</p>
+    <p class="text-md md:text-xl">“অবিচল মাথা, নিশ্চিত লক্ষ্য” ✊</p>
+  </header>
+
+  <!-- Founders Section -->
+  <section id="founders" class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold text-center mb-8">প্রতিষ্ঠাতা সদস্যগণ</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Member Cards -->
+      <div class="bg-white rounded shadow p-4 text-center hover:scale-105 transition-transform duration-300">
+        <img src="img/nahid.jpg" alt="Nahid Joglu" class="mx-auto rounded-full mb-2 w-20 h-20 object-cover">
+        <p class="font-semibold text-sm">Nahid Joglu</p>
+        <p class="text-gray-500 text-xs">প্রতিষ্ঠাতা সদস্য</p>
+      </div>
+
+      <div class="bg-white rounded shadow p-4 text-center hover:scale-105 transition-transform duration-300">
+        <img src="img/shafin.jpg" alt="Shafin Nur Islam" class="mx-auto rounded-full mb-2 w-20 h-20 object-cover">
+        <p class="font-semibold text-sm">Shafin Nur Islam</p>
+        <p class="text-gray-500 text-xs">প্রতিষ্ঠাতা সদস্য</p>
+      </div>
+
+      <div class="bg-white rounded shadow p-4 text-center hover:scale-105 transition-transform duration-300">
+        <img src="img/akib.jpg" alt="Shahriar Kamal Akib Miaji" class="mx-auto rounded-full mb-2 w-20 h-20 object-cover">
+        <p class="font-semibold text-sm">Shahriar Kamal Akib Miaji</p>
+        <p class="text-gray-500 text-xs">প্রতিষ্ঠাতা সদস্য</p>
+      </div>
+
+      <div class="bg-white rounded shadow p-4 text-center hover:scale-105 transition-transform duration-300">
+        <img src="img/hanif.jpg" alt="Md Abu Hanif AH" class="mx-auto rounded-full mb-2 w-20 h-20 object-cover">
+        <p class="font-semibold text-sm">Md Abu Hanif AH</p>
+        <p class="text-gray-500 text-xs">প্রতিষ্ঠাতা সদস্য</p>
+      </div>
+
+      <div class="bg-white rounded shadow p-4 text-center hover:scale-105 transition-transform duration-300">
+        <img src="img/minhaz.jpg" alt="Minhazul Islam Sowad" class="mx-auto rounded-full mb-2 w-20 h-20 object-cover">
+        <p class="font-semibold text-sm">Minhazul Islam Sowad</p>
+        <p class="text-gray-500 text-xs">প্রতিষ্ঠাতা সদস্য</p>
+      </div>
+
+      <div class="bg-white rounded shadow p-4 text-center hover:scale-105 transition-transform duration-300">
+        <img src="img/robin.jpg" alt="Rifat Islam Robin" class="mx-auto rounded-full mb-2 w-20 h-20 object-cover">
+        <p class="font-semibold text-sm">Rifat Islam Robin</p>
+        <p class="text-gray-500 text-xs">প্রতিষ্ঠাতা সদস্য</p>
+      </div>
+
+      <div class="bg-white rounded shadow p-4 text-center hover:scale-105 transition-transform duration-300">
+        <img src="img/jahin.jpg" alt="K M Jahin" class="mx-auto rounded-full mb-2 w-20 h-20 object-cover">
+        <p class="font-semibold text-sm">K M Jahin</p>
+        <p class="text-gray-500 text-xs">প্রতিষ্ঠাতা সদস্য</p>
+      </div>
+
+      <div class="bg-white rounded shadow p-4 text-center hover:scale-105 transition-transform duration-300">
+        <img src="img/himle.jpg" alt="Hafizul Islam Himel" class="mx-auto rounded-full mb-2 w-20 h-20 object-cover">
+        <p class="font-semibold text-sm">Hafizul Islam Himel</p>
+        <p class="text-gray-500 text-xs">প্রতিষ্ঠাতা সদস্য</p>
+      </div>
+
+      <div class="bg-white rounded shadow p-4 text-center hover:scale-105 transition-transform duration-300">
+        <img src="img/soyib.jpg" alt="Shyîb Çhøwdhûry" class="mx-auto rounded-full mb-2 w-20 h-20 object-cover">
+        <p class="font-semibold text-sm">Shyîb Çhøwdhûry</p>
+        <p class="text-gray-500 text-xs">প্রতিষ্ঠাতা সদস্য</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+<section id="about" class="bg-blue-50 py-16">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800">হাওয়া কমিটি সম্পর্কে</h2>
+    <p class="text-gray-700 text-lg mb-6">
+      হাওয়া কমিটি হলো একটি সমাজসেবামূলক সংগঠন, যা <span class="font-semibold">২০২৩ সালে</span> প্রতিষ্ঠিত হয়।  
+      আমরা সমাজে সমতা, সচেতনতা এবং যুব নেতৃত্ব বিকাশে কাজ করি, এবং শিক্ষার মাধ্যমে ইতিবাচক পরিবর্তন আনার লক্ষ্য রাখি।
+    </p>
+
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-5 rounded shadow hover:scale-105 transition-transform duration-300">
+        <h3 class="text-xl font-semibold mb-2">মিশন</h3>
+        <p class="text-gray-600 text-sm">সমতা ও সুযোগ বৃদ্ধি করে যুব সমাজকে এগিয়ে নেওয়া।</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow hover:scale-105 transition-transform duration-300">
+        <h3 class="text-xl font-semibold mb-2">ভিশন</h3>
+        <p class="text-gray-600 text-sm">একটি সমাজ যেখানে সকলের জন্য সমান সুযোগ থাকবে।</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow hover:scale-105 transition-transform duration-300">
+        <h3 class="text-xl font-semibold mb-2">মূল্যবোধ</h3>
+        <p class="text-gray-600 text-sm">সততা, দায়বদ্ধতা এবং সামাজিক সচেতনতা বজায় রাখা।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+
+ <!-- Members Section -->
+<section id="members" class="bg-blue-50 py-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-800">সদস্য তালিকা</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+      <!-- Member Cards -->
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn">
+        <h3 class="font-semibold text-lg mb-1">রবিন</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১৩৬</p>
+        <p class="text-sm text-gray-600">রংপুর ১,৩,৬</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-100">
+        <h3 class="font-semibold text-lg mb-1">হিমেল</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ২,৩,৪</p>
+        <p class="text-sm text-gray-600">কুড়িগ্রাম</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-200">
+        <h3 class="font-semibold text-lg mb-1">কাবির</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১,৫,৬</p>
+        <p class="text-sm text-gray-600">দিনাজপুর</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-300">
+        <h3 class="font-semibold text-lg mb-1">হানিফ</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ২,৮</p>
+        <p class="text-sm text-gray-600">বগুড়া</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-400">
+        <h3 class="font-semibold text-lg mb-1">হোসেন সিরাজগঞ্জ</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১,২,১৯</p>
+        <p class="text-sm text-gray-600">সিরাজগঞ্জ</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-500">
+        <h3 class="font-semibold text-lg mb-1">হান্নান</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১,৪,৫</p>
+        <p class="text-sm text-gray-600">পাবনা</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-600">
+        <h3 class="font-semibold text-lg mb-1">মোবাশির</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ২,৩,৮</p>
+        <p class="text-sm text-gray-600">টাঞ্চুইল</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-700">
+        <h3 class="font-semibold text-lg mb-1">সোয়াইব</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১,৩,৮</p>
+        <p class="text-sm text-gray-600">ময়মনসিংহ</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-800">
+        <h3 class="font-semibold text-lg mb-1">মাহফুজ</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১,৬</p>
+        <p class="text-sm text-gray-600">কিশোরগঞ্জ</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-900">
+        <h3 class="font-semibold text-lg mb-1">রয়াদ</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১,৮,১৯</p>
+        <p class="text-sm text-gray-600">অবস্থান: 214</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-1000">
+        <h3 class="font-semibold text-lg mb-1">নোমান</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১১,৬৪</p>
+        <p class="text-sm text-gray-600">কুমিল্লা</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-1100">
+        <h3 class="font-semibold text-lg mb-1">সপন</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১,৪,৬</p>
+        <p class="text-sm text-gray-600">৭খালী</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-1200">
+        <h3 class="font-semibold text-lg mb-1">নাহিদ</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ৩,১০,১৪</p>
+        <p class="text-sm text-gray-600">চট্টগ্রাম</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-1300">
+        <h3 class="font-semibold text-lg mb-1">ফয়সাল</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ২</p>
+        <p class="text-sm text-gray-600">কুমিল্লা</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-1400">
+        <h3 class="font-semibold text-lg mb-1">তারেক</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ৮,১১,৫,৩৯</p>
+        <p class="text-sm text-gray-600">চট্টগ্রাম</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-1500">
+        <h3 class="font-semibold text-lg mb-1">মিনহাজ</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১,২,৯</p>
+        <p class="text-sm text-gray-600">চট্টগ্রাম</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-1600">
+        <h3 class="font-semibold text-lg mb-1">শাফিন</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১,২,১২</p>
+        <p class="text-sm text-gray-600">কক্সবাজার / বান্দরবন / চট্টগ্রাম</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-1700">
+        <h3 class="font-semibold text-lg mb-1">আকিব</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ৭,১৫</p>
+        <p class="text-sm text-gray-600">কক্সবাজার / চট্টগ্রাম</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-1800">
+        <h3 class="font-semibold text-lg mb-1">জাহিন</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ৪</p>
+        <p class="text-sm text-gray-600">কক্সবাজার / চট্টগ্রাম / ফেনি</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-1900">
+        <h3 class="font-semibold text-lg mb-1">নিহান</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ২,৩,৪</p>
+        <p class="text-sm text-gray-600">ঢাকা</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-2000">
+        <h3 class="font-semibold text-lg mb-1">আমজাদ</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ৫,৬,৭</p>
+        <p class="text-sm text-gray-600">ঢাকা</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-2100">
+        <h3 class="font-semibold text-lg mb-1">শহীদ</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ২,৩</p>
+        <p class="text-sm text-gray-600">পাবনা</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-2200">
+        <h3 class="font-semibold text-lg mb-1">আরিফ</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১৩,১৮৬</p>
+        <p class="text-sm text-gray-600">চট্টগ্রাম</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-2300">
+        <h3 class="font-semibold text-lg mb-1">আলি</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ৪,১,২</p>
+        <p class="text-sm text-gray-600">কক্সবাজার / পঞ্চগড়</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-2400">
+        <h3 class="font-semibold text-lg mb-1">কাঞ্চন</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ৭,১২,১৩,১৪</p>
+        <p class="text-sm text-gray-600">ঢাকা</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-2500">
+        <h3 class="font-semibold text-lg mb-1">রোকন</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ২,৩,৪,৫</p>
+        <p class="text-sm text-gray-600">দিনাজপুর</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-2600">
+        <h3 class="font-semibold text-lg mb-1">ফিরোজ</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১৫,১৮,১৯</p>
+        <p class="text-sm text-gray-600">ঢাকা</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-2700">
+        <h3 class="font-semibold text-lg mb-1">হোসেন সিরাজগঞ্জ</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১,৩,৬</p>
+        <p class="text-sm text-gray-600">সিরাজগঞ্জ</p>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-2800">
+        <h3 class="font-semibold text-lg mb-1">নাইম</h3>
+        <p class="text-sm text-gray-500 mb-1">আসন: ১০,১৭,২০</p>
+        <p class="text-sm text-gray-600">ঢাকা</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(10px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+.animate-fadeIn { animation: fadeIn 0.6s ease forwards; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+.delay-900 { animation-delay: 0.9s; }
+.delay-1000 { animation-delay: 1s; }
+.delay-1100 { animation-delay: 1.1s; }
+.delay-1200 { animation-delay: 1.2s; }
+.delay-1300 { animation-delay: 1.3s; }
+.delay-1400 { animation-delay: 1.4s; }
+.delay-1500 { animation-delay: 1.5s; }
+.delay-1600 { animation-delay: 1.6s; }
+.delay-1700 { animation-delay: 1.7s; }
+.delay-1800 { animation-delay: 1.8s; }
+.delay-1900 { animation-delay: 1.9s; }
+.delay-2000 { animation-delay: 2s; }
+.delay-2100 { animation-delay: 2.1s; }
+.delay-2200 { animation-delay: 2.2s; }
+.delay-2300 { animation-delay: 2.3s; }
+.delay-2400 { animation-delay: 2.4s; }
+.delay-2500 { animation-delay: 2.5s; }
+.delay-2600 { animation-delay: 2.6s; }
+.delay-2700 { animation-delay: 2.7s; }
+.delay-2800 { animation-delay: 2.8s; }
+</style>
+
+
+
+<!-- Members Cards Section -->
+<section id="members-cards" class="bg-blue-50 py-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-800">তৃণমূল সহযোদ্ধা ✊</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Member Cards -->
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn">
+        <h3 class="font-semibold text-lg mb-1">Hannan Aslam</h3>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-100">
+        <h3 class="font-semibold text-lg mb-1">Hossain Mohammad Riad</h3>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-200">
+        <h3 class="font-semibold text-lg mb-1">Md Foysal Ahmed</h3>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-300">
+        <h3 class="font-semibold text-lg mb-1">MD Mubasshir Islam</h3>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-400">
+        <h3 class="font-semibold text-lg mb-1">Md. Shahiduz Sk</h3>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-500">
+        <h3 class="font-semibold text-lg mb-1">Shahriar Kabir Zaman</h3>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-600">
+        <h3 class="font-semibold text-lg mb-1">Musarouf Hossen</h3>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-700">
+        <h3 class="font-semibold text-lg mb-1">Noman Nazrul Islam</h3>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-800">
+        <h3 class="font-semibold text-lg mb-1">Shariyan Ahmed</h3>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-900">
+        <h3 class="font-semibold text-lg mb-1">Mhafuj Tarekul Islam</h3>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-1000">
+        <h3 class="font-semibold text-lg mb-1">Arif Yeasir Tazbir</h3>
+      </div>
+
+      <div class="bg-white p-5 rounded shadow transform transition duration-500 hover:scale-105 hover:shadow-lg animate-fadeIn delay-1100">
+        <h3 class="font-semibold text-lg mb-1">Kanchan</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tailwind Animation -->
+<style>
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(10px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+.delay-900 { animation-delay: 0.9s; }
+.delay-1000 { animation-delay: 1s; }
+.delay-1100 { animation-delay: 1.1s; }
+</style>
+
+
+
+
+    <!-- Contact Section -->
+  <section id="contact-login" class="bg-blue-100 py-12">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
     
+    <!-- Contact Form -->
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-bold mb-4 text-center">যোগাযোগ করুন</h2>
+      <p class="mb-6 text-center">আপনার প্রশ্ন বা মতামত আমাদের জানান। আমরা আপনার সাথে যোগাযোগ করব।</p>
+      <form>
+        <input type="text" placeholder="আপনার নাম" class="w-full mb-4 p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <input type="email" placeholder="আপনার ইমেইল" class="w-full mb-4 p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <textarea placeholder="আপনার বার্তা" class="w-full mb-4 p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" rows="4"></textarea>
+        <button type="submit" class="w-full bg-blue-700 text-white px-6 py-3 rounded hover:bg-blue-800 transition-colors duration-300">পাঠান</button>
+      </form>
+    </div>
+
+    <!-- Login Form -->
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-bold mb-4 text-center">লগইন করুন</h2>
+      <form>
+        <input type="text" placeholder="ইউজারনেম" class="w-full mb-4 p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400">
+        <input type="password" placeholder="পাসওয়ার্ড" class="w-full mb-4 p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400">
+        <button type="submit" class="w-full bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition-colors duration-300">লগইন</button>
+      </form>
+      <p class="text-sm text-gray-500 mt-4 text-center">পাসওয়ার্ড ভুলে গেছেন? <a href="#" class="text-blue-600 hover:underline">রিসেট করুন</a></p>
+    </div>
+
+    <!-- Location / Map -->
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-bold mb-4 text-center">অবস্থান</h2>
+      <p class="text-center mb-4">আমাদের অফিসের অবস্থান:</p>
+      <div class="w-full h-64 rounded overflow-hidden">
+        <!-- Google Maps iframe -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.901782425856!2d90.41864811498179!3d23.79391949456664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c8d2f6b6d9e1%3A0x9c3f0b0b3d3f1234!2sCox%27s%20Bazar%20Polytechnic%20Institute!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+
+
+<!-- Footer -->
+<footer class="bg-blue-800 text-gray-200 py-12">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <!-- About / Logo -->
+    <div>
+      <h3 class="text-xl font-bold mb-4">হাওয়া কমিটি</h3>
+      <p class="text-gray-300 text-sm">
+        সমাজে সমতা ও সচেতনতা আনার লক্ষ্যে কাজ করে। যুব সমাজকে নেতৃত্বের জন্য প্রস্তুত করি।
+      </p>
+    </div>
+
+    <!-- Navigation Links -->
+    <div>
+      <h3 class="text-xl font-bold mb-4">লিঙ্ক</h3>
+      <ul class="space-y-2 text-gray-300">
+        <li><a href="#home" class="hover:text-white transition-colors">হোম</a></li>
+        <li><a href="#about" class="hover:text-white transition-colors">হাওয়া কমিটি সম্পর্কে</a></li>
+        <li><a href="#members" class="hover:text-white transition-colors">সদস্য তালিকা</a></li>
+        <li><a href="#contact-login" class="hover:text-white transition-colors">যোগাযোগ / লগইন</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div>
+      <h3 class="text-xl font-bold mb-4">ফলো করুন</h3>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-white transition-colors" aria-label="Facebook">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H8v-3h2.4V9.2c0-2.4 1.4-3.8 3.5-3.8 1 0 2 .1 2 .1v2.2h-1.1c-1.1 0-1.5.7-1.5 1.5v1.7h2.6l-.4 3h-2.2v7A10 10 0 0022 12z"/></svg>
+        </a>
+        <a href="#" class="hover:text-white transition-colors" aria-label="Twitter">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.1.9 4.8 4.8 0 002.1-2.7 9.9 9.9 0 01-3.1 1.2 4.9 4.9 0 00-8.4 4.5A13.9 13.9 0 011.7 2.2s-4 9 5 13a14 14 0 01-7 2c9 5.5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+        </a>
+        <a href="#" class="hover:text-white transition-colors" aria-label="LinkedIn">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M4.98 3a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM2 9h6v12H2zM14 9h5v1.71h.07c.7-1.3 2.42-2.67 4.93-2.67 5.27 0 6.25 3.46 6.25 7.95V21h-6v-6.3c0-1.5-.03-3.43-2.09-3.43-2.09 0-2.41 1.63-2.41 3.32V21h-6z"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="mt-12 text-center text-gray-400 text-sm">
+    &copy; ২০২৫ হাওয়া কমিটি। সর্বস্বত্ব সংরক্ষিত।
+  </div>
+</footer>
+
+
 </body>
 </html>
