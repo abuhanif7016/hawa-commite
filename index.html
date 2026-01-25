@@ -450,112 +450,125 @@
   </div>
 </section>
 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .animate-fadeIn {
+      animation: fadeIn 0.6s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
 <!-- Gallery Section -->
-<section id="gallery" class="bg-blue-50 py-16">
+<section id="gallery" class="bg-gradient-to-b from-blue-50 to-white py-20">
   <div class="max-w-7xl mx-auto px-6">
 
-    <!-- Heading -->
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-3">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-center text-blue-900 mb-3">
       ফটো গ্যালারি
     </h2>
-    <p class="text-center text-gray-600 mb-10">
+    <p class="text-center text-gray-600 mb-14">
       হাওয়া কমিটির কার্যক্রম ও তৃণমূল সহযোদ্ধাদের মুহূর্ত
     </p>
 
     <!-- Album Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
 
-      <!-- Album Card -->
-      <div onclick="openAlbum('album1')" 
-        class="cursor-pointer bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-        <img src="img/nahid.jpg" class="w-full h-44 object-cover">
-        <div class="p-4 text-center">
-          <h3 class="font-semibold text-lg">সভা ও মিটিং</h3>
+      <div onclick="openAlbum('album1')" class="group cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-500 overflow-hidden hover:-translate-y-2">
+        <img src="img/nahid.jpg" class="w-full h-48 object-cover group-hover:scale-110 transition duration-700">
+        <div class="p-5 text-center">
+          <h3 class="font-bold text-lg">সভা ও মিটিং</h3>
           <p class="text-sm text-gray-500">১২টি ছবি</p>
         </div>
       </div>
 
-      <div onclick="openAlbum('album2')" 
-        class="cursor-pointer bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-        <img src="img/shafin.jpg" class="w-full h-44 object-cover">
-        <div class="p-4 text-center">
-          <h3 class="font-semibold text-lg">তৃণমূল সহযোদ্ধা</h3>
+      <div onclick="openAlbum('album2')" class="group cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-500 overflow-hidden hover:-translate-y-2">
+        <img src="img/The 9 creator of the Hawa Committee.jpg" class="w-full h-48 object-cover group-hover:scale-110 transition duration-700">
+        <div class="p-5 text-center">
+          <h3 class="font-bold text-lg">তৃণমূল সহযোদ্ধা</h3>
           <p class="text-sm text-gray-500">১৫টি ছবি</p>
         </div>
       </div>
 
-      <div onclick="openAlbum('album3')" 
-        class="cursor-pointer bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-        <img src="img/akib.jpg" class="w-full h-44 object-cover">
-        <div class="p-4 text-center">
-          <h3 class="font-semibold text-lg">কর্মসূচি</h3>
+      <div onclick="openAlbum('album3')" class="group cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-500 overflow-hidden hover:-translate-y-2">
+        <img src="img/akib.jpg" class="w-full h-48 object-cover group-hover:scale-110 transition duration-700">
+        <div class="p-5 text-center">
+          <h3 class="font-bold text-lg">কর্মসূচি</h3>
           <p class="text-sm text-gray-500">১০টি ছবি</p>
+        </div>
+      </div>
+
+      <div onclick="openAlbum('album4')" class="group cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-500 overflow-hidden hover:-translate-y-2">
+        <img src="img/program.jpg" class="w-full h-48 object-cover group-hover:scale-110 transition duration-700">
+        <div class="p-5 text-center">
+          <h3 class="font-bold text-lg">বিশেষ আয়োজন</h3>
+          <p class="text-sm text-gray-500">৮টি ছবি</p>
         </div>
       </div>
 
     </div>
 
     <!-- Album View -->
-    <div id="albumView" class="hidden mt-14">
+    <div id="albumView" class="hidden mt-20 animate-fadeIn">
       <div class="flex justify-between items-center mb-6">
-        <h3 id="albumTitle" class="text-2xl font-bold text-blue-800"></h3>
-        <button onclick="closeAlbum()" class="text-red-600 font-semibold">
+        <h3 id="albumTitle" class="text-2xl font-extrabold text-blue-900"></h3>
+        <button onclick="closeAlbum()" class="px-4 py-1 rounded-full bg-red-100 text-red-600 hover:bg-red-600 hover:text-white transition">
           ✖ বন্ধ করুন
         </button>
       </div>
 
-      <div id="albumImages"
-        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
-      </div>
+      <div id="albumImages" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"></div>
     </div>
 
   </div>
 </section>
-<!-- Album Script -->
 
 <script>
   const albums = {
     album1: {
       title: "সভা ও মিটিং",
-      images: [
-        "img/nahid.jpg",
-        "img/shafin.jpg",
-        "img/akib.jpg",
-        "img/hanif.jpg"
-      ]
+      images: ["img/nahid.jpg","img/shafin.jpg","img/akib.jpg","img/hanif.jpg"]
     },
     album2: {
       title: "তৃণমূল সহযোদ্ধা",
-      images: [
-        "img/minhaz.jpg",
-        "img/soyib.jpg",
-        "img/robin.jpg",
-        "img/himle.jpg"
-      ]
+      images: ["img/minhaz.jpg","img/soyib.jpg","img/robin.jpg","img/himle.jpg"]
     },
     album3: {
       title: "কর্মসূচি",
-      images: [
-        "img/jahin.jpg",
-        "img/nahid.jpg",
-        "img/shafin.jpg"
-      ]
+      images: ["img/jahin.jpg","img/nahid.jpg","img/shafin.jpg"]
+    },
+    album4: {
+      title: "বিশেষ আয়োজন",
+      images: ["img/program1.jpg","img/program2.jpg","img/program3.jpg","img/program4.jpg"]
     }
   };
 
   function openAlbum(key) {
     const album = albums[key];
     document.getElementById("albumTitle").innerText = album.title;
-
     const container = document.getElementById("albumImages");
     container.innerHTML = "";
 
     album.images.forEach(img => {
       container.innerHTML += `
-        <div class="overflow-hidden rounded-xl shadow">
-          <img src="${img}" class="w-full h-40 object-cover hover:scale-110 transition duration-500">
-        </div>
-      `;
+        <div class="overflow-hidden rounded-2xl shadow-lg">
+          <img src="${img}" class="w-full h-40 object-cover hover:scale-125 transition duration-700">
+        </div>`;
     });
 
     document.getElementById("albumView").classList.remove("hidden");
@@ -567,17 +580,6 @@
   }
 </script>
 
-
-<!-- Script -->
-<script>
-  const loadBtn = document.getElementById("loadMoreBtn");
-  const hiddenImages = document.querySelectorAll(".gallery-item.hidden");
-
-  loadBtn.addEventListener("click", () => {
-    hiddenImages.forEach(img => img.classList.remove("hidden"));
-    loadBtn.style.display = "none";
-  });
-</script>
 
 
 
